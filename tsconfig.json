@@ -8,5 +8,9 @@
                 "src/*"
             ]
         }
-    }
+    },
+    "include": [
+        "src",
+        "nativewind-env.d.ts"
+    ]
 }
