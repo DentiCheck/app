@@ -148,7 +148,7 @@ export default function MyPageScreen() {
                     <View className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden mb-6">
                         <MenuItem icon={Palette} label="테마 변경" color="#8b5cf6" onPress={() => navigation.navigate('ThemeSelector')} />
                         <MenuItem icon={Bell} label="알림 설정" onPress={() => navigation.navigate('NotificationSettings')} />
-                        <MenuItem icon={Heart} label="찜한 병원" color="#ef4444" onPress={() => navigation.navigate('Main', { screen: 'Hospitals', params: { tab: 'favorites' } })} />
+                        <MenuItem icon={Heart} label="찜한 병원" color="#ef4444" onPress={() => navigation.navigate('Hospitals', { tab: 'favorites' })} />
                     </View>
 
                     {/* Menu Group 2 */}

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, TextInput, TouchableOpacity, Linking } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/RootNavigator';
 import { Search, MapPin, Star, Phone, Clock, Heart, Navigation, MapPinned } from 'lucide-react-native';
@@ -28,10 +28,21 @@ type Hospital = {
 
 export default function HospitalsScreen() {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    const route = useRoute();
     const { theme } = useColorTheme();
     const [searchQuery, setSearchQuery] = useState('');
     const [favorites, setFavorites] = useState<string[]>([]);
-    const [activeTab, setActiveTab] = useState('all');
+
+    // Get tab param from navigation
+    const { tab } = (route.params as { tab?: string }) || {};
+    const [activeTab, setActiveTab] = useState(tab === 'favorites' ? 'favorites' : 'all');
+
+    // Update activeTab if params change
+    React.useEffect(() => {
+        if (tab === 'favorites') {
+            setActiveTab('favorites');
+        }
+    }, [tab]);
 
     const hospitals: Hospital[] = [
         {

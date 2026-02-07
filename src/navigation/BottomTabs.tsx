@@ -20,34 +20,52 @@ export function BottomTabs() {
             }}
         >
             <Tab.Screen
-                name="홈"
+                name="Home"
                 component={HomeScreen}
-                options={{ tabBarIcon: ({ color, size }) => <Home color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: '홈',
+                    tabBarIcon: ({ color, size }) => <Home color={color} size={size} />
+                }}
             />
             <Tab.Screen
-                name="AI체크"
+                name="AICheck"
                 component={AICheckScreen}
-                options={{ tabBarIcon: ({ color, size }) => <Camera color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: 'AI체크',
+                    tabBarIcon: ({ color, size }) => <Camera color={color} size={size} />
+                }}
             />
             <Tab.Screen
-                name="상식챗"
+                name="Chatbot"
                 component={ChatbotScreen}
-                options={{ tabBarIcon: ({ color, size }) => <MessageSquare color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: '상식챗',
+                    tabBarIcon: ({ color, size }) => <MessageSquare color={color} size={size} />
+                }}
             />
             <Tab.Screen
-                name="병원찾기"
+                name="Hospitals"
                 component={HospitalsScreen}
-                options={{ tabBarIcon: ({ color, size }) => <Search color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: '병원찾기',
+                    tabBarIcon: ({ color, size }) => <Search color={color} size={size} />
+                }}
             />
             <Tab.Screen
-                name="커뮤니티"
+                name="Community"
                 component={CommunityScreen}
-                options={{ tabBarIcon: ({ color, size }) => <Users color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: '커뮤니티',
+                    tabBarIcon: ({ color, size }) => <Users color={color} size={size} />
+                }}
             />
             <Tab.Screen
-                name="마이"
+                name="MyPage"
                 component={MyPageScreen}
-                options={{ tabBarIcon: ({ color, size }) => <User color={color} size={size} /> }}
+                options={{
+                    tabBarLabel: '마이',
+                    tabBarIcon: ({ color, size }) => <User color={color} size={size} />
+                }}
             />
         </Tab.Navigator>
     );

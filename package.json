@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean:start": "powershell -ExecutionPolicy Bypass -File ./scripts/restart-clean.ps1"
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",
