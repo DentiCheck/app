@@ -39,8 +39,8 @@ PC에서 모바일 환경을 테스트하려면 에뮬레이터 설정이 필요
 #### 2-1. 저장소 가져오기 및 이동
 *(이미 소스를 받았다면 생략)*
 ```bash
-git clone https://github.com/DentiCheck/denticheck-app.git
-cd denticheck-app
+git clone https://github.com/DentiCheck/app.git
+cd app
 ```
 
 #### 2-2. 패키지 설치
