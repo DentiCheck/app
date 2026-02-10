@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -68,7 +68,6 @@ export default function HospitalMapScreen() {
 
             <MapView
                 style={{ width, height: '100%' }}
-                provider={PROVIDER_GOOGLE}
                 initialRegion={region}
                 showsUserLocation={true}
                 showsMyLocationButton={true}

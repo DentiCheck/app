@@ -1,3 +1,4 @@
+import '../global.css';
 import { registerRootComponent } from 'expo';
 import { RootNavigator } from './navigation/RootNavigator';
 
