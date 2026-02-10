@@ -3,7 +3,7 @@
 덴티체크 모바일 애플리케이션 프로젝트입니다.
 
 ## 🛠️ 기술 스택 (Tech Stack)
-- **Framework**: Expo SDK 52 (React Native 0.76)
+- **Framework**: Expo SDK 54 (React Native 0.76)
 - **Language**: TypeScript
 - **Styling**: NativeWind v2 (TailwindCSS)
 - **Navigation**: React Navigation
